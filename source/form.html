@@ -58,61 +58,62 @@
     </header>
 
     <main class="appointment">
-        <h2 class="appointment__title">Запись на стрижку</h2>
+        <h1 class="appointment__title">Запись на стрижку</h1>
 
         <form class="appointment__form" action="https://e-mail.ru" method="post">
 
             <div class="appointment__data">
                 <p class="appointment__item">
-                    <label class="visually-hidden" for="appoinment__surname">Фамилия</label>
-                    <input id="appoinment__surname" type="text" name="surname" placeholder="Фамилия">
+                    <label class="visually-hidden" for="surname">Фамилия</label>
+                    <input id="surname" type="text" name="surname" placeholder="Фамилия">
                 </p>
                 <p class="appointment__item">
-                    <label class="visually-hidden" for="appoinment__name">Имя</label>
+                    <label class="visually-hidden" for="name">Имя</label>
                     <input id="appoinment__name" type="text" name="name" placeholder="Имя">
                 </p>
                 <p class="appointment__item">
-                    <label class="visually-hidden" for="appoinment__patronymick">Отчество</label>
-                    <input id="appoinment__patronymick" type="text" name="patronymick" placeholder="Отчество">
+                    <label class="visually-hidden" for="patronymick">Отчество</label>
+                    <input id="patronymick" type="text" name="patronymick" placeholder="Отчество">
                 </p>
-                <p class="appointment_item">
-                    <label class="visually-hidden" for="appoinment__phone">Контактный телефон</label>
-                    <input id="appoinment__phone" type="text" name="phone" placeholder="Контактный телефон">
+                <p class="appointment__item">
+                    <label class="visually-hidden" for="phone">Контактный телефон</label>
+                    <input id="phone" type="tel" name="phone" placeholder="Контактный телефон">
                 </p>
-                <p class="appointment_item">
-                    <label class="visually-hidden" for="appoinment__e-mail">Контактный e-mail</label>
-                    <input id="appoinment__e-mail" type="text" name="e-mail" placeholder="Контактный e-mail">
+                <p class="appointment__item">
+                    <label class="visually-hidden" for="e-mail">Контактный e-mail</label>
+                    <input id="e-mail" type="email" name="e-mail" placeholder="Контактный e-mail">
                 </p>
-                <p class="appointment_item">
-                    <label class="visually-hidden" for="appoinment__info">Доп. информация для мастера</label>
-                    <input id="appoinment__info" type="text" name="Info" placeholder="Доп. информация для мастера">
+                <p class="appointment__item">
+                    <!-- <label class="visually-hidden" for="info">Доп. информация для мастера</label>
+                    <textarea id="info" type="text" name="info" placeholder="Доп. информация для мастера"> -->
+                        <textarea name="info" id="info" cols="30" rows="10">Доп. информация для мастера</textarea>
                 </p>
             </div>
 
-            <fieldset class="appoinment__fieldset fieldset__radio">
-                <legend class="fieldset__radio__legend">Выберите модель бороды</legend>
+            <fieldset class="appoinment__fieldset radio">
+                <legend class="radio__legend">Выберите модель бороды</legend>
 
-                <label class="appoinment__radio">
+                <label class="radio__item">
                     <input class="visually-hidden" type="radio" id="admiral" value="Адмирал" name="model" checked>
                     <span class="radio__decor">svg</span>
                     Адмирал
                 </label>
-                <label class="appoinment__radio">
+                <label class="radio__item">
                     <input class="visually-hidden" type="radio" id="woodcutter" value="Лесоруб" name="model">
                     <span class="radio__decor"></span>
                     Лесоруб
                 </label>
-                <label class="appoinment__radio">
+                <label class="radio__item">
                     <input class="visually-hidden" type="radio" id="polar-explorer" value="Полярник" name="model">
                     <span class="radio__decor"></span>
                     Полярник
                 </label>
-                <label class="appoinment__radio">
+                <label class="radio__item">
                     <input class="visually-hidden" type="radio" id="boyar" value="Боярин" name="model">
                     <span class="radio__decor"></span>
                     Боярин
                 </label>
-                <label class="appoinment__radio">
+                <label class="radio__item">
                     <input class="visually-hidden" type="radio" id="wiseman" value="Мудрец" name="model">
                     <span class="radio__decor"></span>
                     Мудрец
@@ -120,40 +121,40 @@
             </fieldset>
 
 
-            <fieldset class="appoinment__fieldset fieldset__checkbox">
-                <legend class="fieldset__checkbox__legend">Дополнительные услуги</legend>
+            <fieldset class="appoinment__fieldset checkbox">
+                <legend class="checkbox__legend">Дополнительные услуги</legend>
 
-                <label class="appoinment__checkbox">
+                <label class="checkbox__item">
                     <input class="visually-hidden" type="checkbox" id="paint-beard" value="Подкрасить бороду"
                         name="operation" checked>
                     <span class="checkbox__decor"></span>
                     Подкрасить бороду
                 </label>
-                <label class="appoinment__checkbox">
+                <label class="checkbox__item">
                     <input class="visually-hidden" type="checkbox" id="twist-whiskers" value="Накрутить усы"
                         name="operation" checked>
                     <span class="checkbox__decor"></span>
                     Накрутить усы
                 </label>
-                <label class="appoinment__checkbox">
+                <label class="checkbox__item">
                     <input class="visually-hidden" type="checkbox" id="brush-beard" value="Причесать бороду"
                         name="operation">
                     <span class="checkbox__decor"></span>
                     Причесать бороду
                 </label>
-                <label class="appoinment__checkbox">
+                <label class="checkbox__item">
                     <input class="visually-hidden" type="checkbox" id="cut-temples" value="Подровнять виски"
                         name="operation">
                     <span class="checkbox__decor"></span>
                     Подровнять виски
                 </label>
-                <label class="appoinment__checkbox">
+                <label class="checkbox__item">
                     <input class="visually-hidden" type="checkbox" id="delete-gray-hair" value="Убрать седину"
                         name="operation">
                     <span class="checkbox__decor"></span>
                     Убрать седину
                 </label>
-                <label class="appoinment__checkbox">
+                <label class="checkbox__item">
                     <input class="visually-hidden" type="checkbox" id="зщдшыр-baldy" value="Отполировать лысину"
                         name="operation">
                     <span class="checkbox__decor"></span>
