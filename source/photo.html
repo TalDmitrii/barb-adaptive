@@ -66,8 +66,13 @@
             </h2>
             <ul class="works__list">
                 <li class="works__item">
-                    <img src="img/photo-1-mobile.jpg" width="280" height="480" alt="Работа месяца">
-                    <span class="works__item works__item--decor"></span>
+                    <figure class="works__img-first img-first">
+                        <img src="img/photo-1-mobile.jpg" width="280" height="480" alt="Работа месяца">
+                        <!-- стиль для примера -->
+                        <figcaption class="img-first__description"  style="background-color: red;">
+                            Работа месяца
+                        </figcaption>
+                    </figure>
                     <h2  class="works__title">
                         Лжепётр Мчиславский
                     </h2>
@@ -78,21 +83,20 @@
                     <ul class="works__operations-list operations">
                         <li class="operations__item">
                             Стрижка
-                            <span  class="operations__item operations__item--decor"></span>
+                            <span  class="operations__haircut"></span>
                         </li>
                         <li class="operations__item">
                             Бритье
-                            <span  class="operations__item operations__item--decor"></span>
+                            <span  class="operations__shaving"></span>
                         </li>
                         <li class="operations__item">
                             Усы
-                            <span  class="operations__item operations__item--decor"></span>
+                            <span  class="operations__mustache"></span>
                         </li>
                     </ul>
                 </li>
                 <li class="works__item">
                     <img src="img/photo-2-mobile.jpg" width="280" height="176" alt="Пример омоложения">
-                    <span class="works__item works__item--decor"></span>
                     <h2  class="works__title">
                         Саша Мальцев
                     </h2>
@@ -102,13 +106,12 @@
                     <ul class="works__operations-list operations">
                         <li class="operations__item">
                             Стрижка
-                            <span  class="operations__item operations__item--decor"></span>
+                            <span  class="operations__haircut"></span>
                         </li>
                     </ul>
                 </li>
                 <li class="works__item">
                     <img src="img/photo-3-mobile.jpg" width="280" height="176" alt="Подготовка к сезону">
-                    <span class="works__item works__item--decor"></span>
                     <h2  class="works__title">
                         Владимир Иваныч
                     </h2>
@@ -118,17 +121,16 @@
                     <ul class="works__operations-list operations">
                         <li class="operations__item">
                             Стрижка
-                            <span  class="operations__item operations__item--decor"></span>
+                            <span  class="operations__haircut"></span>
                         </li>
                         <li class="operations__item">
                             Усы
-                            <span  class="operations__item operations__item--decor"></span>
+                            <span  class="operations__mustache"></span>
                         </li>
                     </ul>
                 </li>
                 <li class="works__item">
                     <img src="img/photo-4-mobile.jpg" width="280" height="176" alt="Стрижка наголо">
-                    <span class="works__item works__item--decor"></span>
                     <h2  class="works__title">
                         Винстон Синий
                     </h2>
@@ -138,7 +140,7 @@
                     <ul class="works__operations-list operations">
                         <li class="operations__item">
                             Стрижка
-                            <span  class="operations__item operations__item--decor"></span>
+                            <span  class="operations__haircut"></span>
                         </li>
                     </ul>
                 </li>
@@ -228,10 +230,10 @@
             </table>
 
             <div class="page-photo__sale sale">
-                <p class="sale__text">
+                <p class="sale__info">
                     C 10:00 до 14:00 скидка 20%
                 </p>
-                <span class="sale sale--decor"></span>
+                <span class="sale__clock sale__clock--decor"></span>
             </div>
         </section>
     </main>
