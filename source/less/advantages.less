@@ -13,6 +13,11 @@
     position: relative;
 }
 
+.advantages__item {
+    display: none;
+    background-repeat: no-repeat;
+}
+
 .advantages__title {
     font-style: normal;
     font-weight: 700;
@@ -33,44 +38,24 @@
     font-size: 20px;
     line-height: 27px;
     margin: 0 20px;
-    padding: 0;
     padding-bottom: 52px;
     text-align: center;
     width: 280px;
 }
 
 .advantages__item--fast {
-    // position: relative;
-	// overflow: hidden;
-	background-repeat: no-repeat;
-	// background-color: #ffbf47;
-	// background-position: center right 44px;
 	background-position: center top 40px;
 	background-image: url("../img/advantage-1-icon.svg");
 }
 
 .advantages__item--cool {
-    // position: relative;
-	// overflow: hidden;
-	background-repeat: no-repeat;
-	// background-color: #ffbf47;
-	// background-position: center right 44px;
 	background-position: center top 40px;
 	background-image: url("../img/advantage-2-icon.svg");
 }
 
 .advantages__item--price {
-    // position: relative;
-	// overflow: hidden;
-	background-repeat: no-repeat;
-	// background-color: #ffbf47;
-	// background-position: center right 44px;
 	background-position: center top 40px;
 	background-image: url("../img/advantage-3-icon.svg");
-}
-
-.advantages__item {
-    display: none;
 }
 
 .input-slider-1:checked ~ .advantages__list .advantages__item--fast,

@@ -157,6 +157,10 @@ body {
   padding: 0;
   position: relative;
 }
+.advantages__item {
+  display: none;
+  background-repeat: no-repeat;
+}
 .advantages__title {
   font-style: normal;
   font-weight: 700;
@@ -174,28 +178,21 @@ body {
   font-size: 20px;
   line-height: 27px;
   margin: 0 20px;
-  padding: 0;
   padding-bottom: 52px;
   text-align: center;
   width: 280px;
 }
 .advantages__item--fast {
-  background-repeat: no-repeat;
   background-position: center top 40px;
   background-image: url("../img/advantage-1-icon.svg");
 }
 .advantages__item--cool {
-  background-repeat: no-repeat;
   background-position: center top 40px;
   background-image: url("../img/advantage-2-icon.svg");
 }
 .advantages__item--price {
-  background-repeat: no-repeat;
   background-position: center top 40px;
   background-image: url("../img/advantage-3-icon.svg");
-}
-.advantages__item {
-  display: none;
 }
 .input-slider-1:checked ~ .advantages__list .advantages__item--fast,
 .input-slider-2:checked ~ .advantages__list .advantages__item--cool,
@@ -533,32 +530,32 @@ input::placeholder {
   align-items: center;
   display: block;
 }
-.radio__admiral {
-  background-image: url("../img/beard-1.png");
+.radio__decor--admiral {
+  background-image: url("../img/beard-1.svg");
   width: 52px;
   height: 49px;
   display: block;
 }
-.radio__woodcutter {
-  background-image: url("../img/beard-2.png");
+.radio__decor--woodcutter {
+  background-image: url("../img/beard-2.svg");
   width: 58px;
   height: 68px;
   display: block;
 }
-.radio__polar-explorer {
-  background-image: url("../img/beard-3.png");
+.radio__decor--polar-explorer {
+  background-image: url("../img/beard-3.svg");
   width: 63px;
   height: 78px;
   display: block;
 }
-.radio__boyar {
-  background-image: url("../img/beard-4.png");
+.radio__decor--boyar {
+  background-image: url("../img/beard-4.svg");
   width: 57px;
   height: 97px;
   display: block;
 }
-.radio__wiseman {
-  background-image: url("../img/beard-5.png");
+.radio__decor--wiseman {
+  background-image: url("../img/beard-5.svg");
   width: 45px;
   height: 104px;
   display: block;
