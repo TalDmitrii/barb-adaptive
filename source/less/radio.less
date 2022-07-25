@@ -1,0 +1,96 @@
+.radio {
+    border: none;
+    display: flex;
+    width: 244px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 37px;
+}
+
+.radio__item {
+    position: relative;
+    width: 70px;
+    padding-top: 67px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.radio__legend {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+}
+
+.radio__decor {
+    margin: 0 auto;
+    margin-top: 20px;
+    align-items: center;
+    display: block;
+}
+
+.radio__decor--admiral {
+	background-image: url("../img/beard-1.svg");
+    width: 52px;
+    height: 49px;
+    display: block;
+}
+
+.radio__decor--woodcutter {
+    background-image: url("../img/beard-2.svg");
+    width: 58px;
+    height: 68px;
+    display: block;
+}
+
+.radio__decor--polar-explorer {
+    background-image: url("../img/beard-3.svg");
+    width: 63px;
+    height: 78px;
+    display: block;
+}
+
+.radio__decor--boyar {
+    background-image: url("../img/beard-4.svg");
+    width: 57px;
+    height: 97px;
+    display: block;
+}
+
+.radio__decor--wiseman {
+    background-image: url("../img/beard-5.svg");
+    width: 45px;
+    height: 104px;
+    display: block;
+}
+
+.radio__decor::before {
+    content: "";
+    width: 52px;
+    height: 52px;
+    border: 1px solid #E5DDD5;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 8px;
+}
+
+.radio__decor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 18px;
+    left: 25px;
+}
+
+.appointment__form input:checked ~ .radio__decor::after {
+    background-color: #000000;
+}

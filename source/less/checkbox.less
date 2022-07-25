@@ -1,0 +1,67 @@
+.checkbox {
+    border: none;
+    // display: flex;
+    width: 244px;
+    padding: 0;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 37px;
+}
+
+.checkbox__legend {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+}
+
+.checkbox__item {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 32px;
+    margin-left: 43px;
+    position: relative;
+}
+
+.checkbox__item:last-child {
+    margin-bottom: 53px;
+}
+
+.checkbox__decor {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #E5DDD5;
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    left: -60px;
+}
+
+.checkbox__decor::after {
+    content: "";
+    width: 8px;
+    height: 20px;
+    // border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    transform: rotate(45deg);
+
+
+
+}
+
+.appointment__form input:checked ~ .checkbox__decor::after {
+    // background-color: #000000;
+    border: 2px solid #000;
+    background-color: #fff;
+    border-top: none;
+    border-left: none;
+}
