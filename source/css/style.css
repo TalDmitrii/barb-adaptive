@@ -4,7 +4,6 @@
   color: #fff;
 }
 .advantages__list {
-  list-style: none;
   position: relative;
 }
 .advantages__item {
@@ -53,8 +52,7 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 32px;
+  margin: 0 0 32px;
   padding-top: 35px;
 }
 .appointment__item {
@@ -175,7 +173,7 @@ input::placeholder {
 }
 .contacts__title {
   font-weight: 700;
-  padding-top: 33px;
+  padding-top: 72px;
   display: block;
 }
 .contacts__text {
@@ -184,17 +182,18 @@ input::placeholder {
   margin-bottom: 17px;
 }
 .contacts__phone {
+  display: block;
   text-decoration: none;
   color: #fff;
   border: 1px solid #4A4A4A;
-  padding: 12px 0;
-  margin: 20px;
-  margin-top: 0;
+  padding: 12px;
+  width: 280px;
+  margin: 0 auto;
   margin-bottom: 26px;
-  display: block;
 }
 .copyright {
   margin-top: 31px;
+  padding-bottom: 24px;
 }
 .copyright__text {
   line-height: 23px;
@@ -250,29 +249,59 @@ input::placeholder {
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
+  padding-top: 76px;
+  margin-bottom: 26px;
 }
 .news__item {
   text-decoration: none;
   display: flex;
   margin-bottom: 32px;
+  position: relative;
+}
+.news__item::after {
+  content: "";
+  width: 280px;
+  height: 1px;
+  background-color: #E5DDD5;
+  position: absolute;
+  top: 120px;
+  left: 20px;
+}
+.news__item:nth-child(3):after {
+  top: 210px;
 }
 .news__date {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   background-color: #000;
   color: #fff;
-  width: 50px;
-  height: 60px;
+  width: 51px;
+  height: 50px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-right: 20px;
+  flex-direction: column;
+  margin: 0 20px;
+  position: relative;
+}
+.news__date::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+  border-width: 10px 25px 0 25px;
+  position: absolute;
+  top: 50px;
+  left: 2px;
 }
 .news__day {
   font-size: 30px;
-  padding: 0 10px;
+  padding: 10px 10px 0;
+  display: block;
+}
+.news__month {
+  margin-top: -3px;
 }
 .news__text {
   text-decoration: none;
@@ -280,8 +309,8 @@ input::placeholder {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  text-align: center;
-  text-transform: uppercase;
+  text-align: left;
+  text-transform: initial;
   color: #000;
   width: 210px;
 }
@@ -293,6 +322,7 @@ input::placeholder {
   background-color: #F8F5F2;
   padding: 12px;
   margin: 0 auto;
+  margin-bottom: 70px;
 }
 .operations {
   font-size: 16px;
@@ -348,6 +378,7 @@ input::placeholder {
 .page-body {
   width: 320px;
   background-color: #E5E5E5;
+  margin: 0 auto;
 }
 .page-footer {
   background-color: #292929;
@@ -485,12 +516,26 @@ input::placeholder {
 .appointment__form input:checked ~ .radio__decor::after {
   background-color: #000000;
 }
+.reviews {
+  position: relative;
+}
+.reviews::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #F8F5F2 transparent transparent transparent;
+  border-width: 34px 160px 0 160px;
+  position: absolute;
+  top: 214px;
+}
 .reviews__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 28px;
 }
 .reviews__write {
   display: block;
@@ -500,6 +545,7 @@ input::placeholder {
   background-color: #F8F5F2;
   padding: 12px;
   margin: 0 auto;
+  display: none;
 }
 .reviews__item {
   display: flex;
@@ -509,6 +555,7 @@ input::placeholder {
   display: block;
   width: 50px;
   height: 50px;
+  margin-left: 20px;
 }
 .reviews__author-info {
   margin-left: 20px;
@@ -574,7 +621,19 @@ input::placeholder {
   justify-content: space-between;
   display: flex;
   margin: 0 auto;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
+  position: relative;
+}
+.slider__pagination::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #292929 transparent transparent transparent;
+  border-width: 34px 160px 0 160px;
+  position: absolute;
+  top: 18px;
+  left: -132px;
 }
 .slider__pagination label {
   width: 5px;

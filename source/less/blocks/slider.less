@@ -3,7 +3,21 @@
 	justify-content: space-between;
 	display: flex;
     margin: 0 auto;
-    padding-bottom: 12px;
+    padding-bottom: 13px;
+	position: relative;
+}
+
+.slider__pagination::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: #292929 transparent transparent transparent;
+	border-width: 34px 160px 0 160px;
+
+	position: absolute;
+	top: 18px;
+	left: -132px;
 }
 
 .slider__pagination label {
