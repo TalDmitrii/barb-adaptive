@@ -1,6 +1,17 @@
 .user-list {
     line-height: 24px;
     padding-bottom: 263px;
+
+    @media (min-width: @tablet-width) {
+        width: 60px;
+        padding: 0;
+        text-align: center;
+    }
+    
+    @media (min-width: @desktop-width) {
+        width: 150px;
+    }   
+
 }
 
 .user-list__item {
@@ -8,7 +19,10 @@
     padding-bottom: 19px;
     padding-left: 47px;
 
-    display: flex;
+    @media (min-width: @tablet-width) {
+        padding: 0;
+        padding-left: 40px;
+    }
 }
 
 .user-list__login {
@@ -27,4 +41,12 @@
 	background-image: url("../img/login-icon.svg");
     // cursor: pointer;
 }
+
+.user-list__login--desktop {
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+        display: none;
+    }
+}
+
 
