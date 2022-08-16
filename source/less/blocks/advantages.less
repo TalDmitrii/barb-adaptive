@@ -1,16 +1,21 @@
 .advantages {
     position: relative;
-    background-color: #292929;
+    background-color: #353535;
     color: #fff;
 }
 
 .advantages__list {
     position: relative;
+    min-height: 345px;
 }
 
 .advantages__item {
     display: none;
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+		display: block;
+    }
 }
 
 .advantages__title {
@@ -21,6 +26,12 @@
     margin-bottom: 12px;
     padding-top: 165px;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+		padding-top: 42px;
+        margin-left: 224px;
+        text-align: left;
+    }    
 }
 
 .advantages__description {
@@ -29,20 +40,26 @@
     padding-bottom: 30px;
     text-align: center;
     width: 280px;
+
+    @media (min-width: @tablet-width) {
+        margin-left: 224px;
+        text-align: left;
+        width: 441px;
+    }  
 }
 
 .advantages__item--fast {
-	background-position: center top 40px;
+	background-position: left 80px top 40px;
 	background-image: url("../img/advantage-1-icon.svg");
 }
 
 .advantages__item--cool {
-	background-position: center top 40px;
+	background-position: left 80px top 40px;
 	background-image: url("../img/advantage-2-icon.svg");
 }
 
 .advantages__item--price {
-	background-position: center top 40px;
+	background-position: left 80px top 40px;
 	background-image: url("../img/advantage-3-icon.svg");
 }
 

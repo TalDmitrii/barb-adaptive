@@ -4,27 +4,15 @@
     padding: 0;
     list-style: none;
     margin-top: 26px;
+
+    @media (min-width: @tablet-width) {
+        margin-top: 45px;
+    }
 }
 
 .social__item {
+    flex-grow: 1;
     border: 1px solid #4A4A4A;
-}
-
-// Можно ли было это записать таким образом, чтобы ширина поделилась автоматически?
-// .social__item {
-//     min-width: 100px;
-// }
-
-.social__item:first-child {
-    width: 107px;
-}
-
-.social__item:nth-child(2) {
-    width: 105px;
-}
-
-.social__item:nth-child(3) {
-    width: 108px;
 }
 
 .social__link {

@@ -1,8 +1,34 @@
 .page-footer {
     background-color: #292929;
     color: #fff;
+    min-height: 460px;
+
+    @media (min-width: @tablet-width) {
+        min-height: 348px;
+    }
 }
 
-.page-footer {
-    min-height: 460px;
+.page-footer__wrapper {
+    
+    @media (min-width: @tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.page-footer__copyright {
+
+    @media (min-width: @tablet-width) {
+        // order: 2;
+    }
+}
+
+.page-footer__social {
+
+    @media (min-width: @tablet-width) {
+        width: 640px;
+        order: 2;
+        margin: 0 auto;
+    }
 }

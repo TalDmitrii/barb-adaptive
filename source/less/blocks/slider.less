@@ -1,3 +1,25 @@
+.slider__list--advan {
+	position: relative;
+}
+
+.slider__list--advan::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: #353535 transparent transparent transparent;
+	border-width: 34px 160px 0 160px;
+
+	position: absolute;
+	top: 363px;
+	left: 0;
+
+	@media (min-width: @tablet-width) {
+		border-width: 34px 384px 0 384px;
+		top: 504px;
+    }
+}
+
 .slider__pagination {
 	width: 56px;
 	justify-content: space-between;
@@ -5,20 +27,29 @@
     margin: 0 auto;
     padding-bottom: 13px;
 	position: relative;
+
+	@media (min-width: @tablet-width) {
+		display: none;
+    }
 }
 
-.slider__pagination::after {
-	content: "";
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-color: #292929 transparent transparent transparent;
-	border-width: 34px 160px 0 160px;
+// .slider__pagination::after {
+// 	content: "";
+// 	width: 0;
+// 	height: 0;
+// 	border-style: solid;
+// 	border-color: #353535 transparent transparent transparent;
+// 	border-width: 34px 160px 0 160px;
 
-	position: absolute;
-	top: 18px;
-	left: -132px;
-}
+// 	position: absolute;
+// 	top: 18px;
+// 	left: -132px;
+
+// 	@media (min-width: @tablet-width) {
+// 		border-width: 34px 384px 0 384px;
+// 		left: -356px;
+//     }
+// }
 
 .slider__pagination label {
 	width: 5px;
