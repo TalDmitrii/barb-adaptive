@@ -1,6 +1,28 @@
 .reviews {
     position: relative;
+
+    @media (min-width: @desktop-width) {
+		margin-top: 20px;
+    }
 }
+
+.reviews__wrapper {
+
+    @media (min-width: @tablet-width) {
+		display: flex;
+        flex-wrap: wrap;
+        width: 640px;
+        margin: 0 auto;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 960px;
+    }
+}
+
+
 
 .reviews::after {
 	content: "";
@@ -34,9 +56,22 @@
     border: 1px solid #E5DDD5;
     background-color: #F8F5F2;
     padding: 12px;
-    margin: 0 auto;
 
     display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        width: 160px;
+        height: 50px;    
+        margin-bottom: 20px;  
+    }
+}
+
+.reviews__list {
+
+    @media (min-width: @desktop-width) {
+        width: 960px;
+    }
 }
 
 .reviews__item {
@@ -49,6 +84,12 @@
         height: 160px;
         justify-content: space-between;
         margin: 0 auto;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 960px;
+        border: none;
+        justify-content: start;
     }
 }
 
@@ -75,6 +116,12 @@
             left: 18px;
         }
     }
+
+    @media (min-width: @desktop-width) {
+        margin: 0;
+        border: 1px solid #E5DDD5;
+        margin-right: 21px;
+    }
 }
 
 .reviews__item--decor:nth-of-type(2) {
@@ -83,6 +130,12 @@
 
     &::before {
         transform: rotate(180deg);
+    }
+
+    @media (min-width: @desktop-width) {
+        border: 1px solid #E5DDD5;
+        margin: 0;
+        margin-left: 21px;
     }
 }
 
@@ -98,11 +151,24 @@
 		border-radius: 50%;
         margin-top: 40px;
     }
+
+    @media (min-width: @desktop-width) {
+        width: 249px;
+        height: 160px;
+        border-radius: 0;
+        margin: 0;
+    }
 }
 
 .reviews__author-info {
     margin-left: 20px;
     display: block;
+
+    @media (min-width: @desktop-width) {
+        width: 570px;
+        border: 1px solid #E5DDD5;
+        margin: 0;
+    }
 }
 
 .reviews__author-name {
@@ -161,6 +227,11 @@
         height: 33px;
         margin-top: -4px;
         justify-content: space-around;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-top: 40px;
+        margin-bottom: 46px;
     }
 }
 
