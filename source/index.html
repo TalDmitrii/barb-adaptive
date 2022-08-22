@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Барбершоп «Бородинский»</title>
     <!-- <link href="css/normalize.css" rel="stylesheet"> -->
     <link href="./css/style.css" rel="stylesheet">
@@ -12,8 +13,12 @@
 <body class="page-body">
     <header class="page-header">
         <div class="page-header__logo">
-            <a href="#">
-                <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+            <a href="index.html">
+                <picture>
+                    <source srcset="img/logo.svg" media="(min-width: 1200px)">
+                    <source srcset="img/logotype-tablet.svg" media="(min-width: 768px)">
+                    <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+                </picture>
             </a>
         </div>
 
@@ -232,7 +237,12 @@
                 <div class="reviews__list">
                     <blockquote class="reviews__item">
                         <span class="reviews__decor"></span>
-                        <img src="img/photo.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
+                                <picture>
+                                    <!-- <source srcset="img/logo.svg" media="(min-width: 1200px)">
+                                    <source srcset="img/phot" media="(min-width: 768px)"> -->
+                                    <img src="img/photo_mobile.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
+                                </picture>
+                        
                         <div class="reviews__author-info">
                             <cite class="reviews__author-name">Трэвис Баркер</cite>
                             <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться,
