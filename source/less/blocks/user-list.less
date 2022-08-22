@@ -39,10 +39,14 @@
     background-repeat: no-repeat;
 
 	background-image: url("../img/login-icon.svg");
-    // cursor: pointer;
+    
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+        top: -6px;
+        left: -20px;
+    }
 }
 
-.user-list__login--desktop {
+.user-list__desktop {
 
     @media (min-width: @tablet-width) and (max-width: @desktop-width) {
         display: none;
