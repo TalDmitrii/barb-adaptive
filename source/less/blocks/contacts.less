@@ -3,17 +3,38 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+
+    @media (min-width: @tablet-width) {
+        text-align: left;
+        align-items: flex-start;
+        margin-left: 64px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-left: 120px;
+    }
 }
 
 .contacts__title {
     font-weight: 700;
     padding-top: 72px;
     padding-bottom: 14px;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        padding-top: 50px;
+        text-transform: uppercase;
+    }
 }
 
 .contacts__text {
     width: 195px;
     margin-bottom: 17px;
+
+    @media (min-width: @tablet-width) {
+        width: 315px;
+        margin: 0;
+    }
 }
 
 .contacts__phone {
@@ -22,4 +43,11 @@
     border: 1px solid #4A4A4A;
     padding: 12px;
     width: 280px;
+
+    @media (min-width: @tablet-width) {
+        border: none;
+        text-align: left;
+        padding: 0;
+    }
+
 }

@@ -1,8 +1,37 @@
 .page-footer {
     background-color: #292929;
     color: #fff;
+    min-height: 460px;
+
+    @media (min-width: @tablet-width) {
+        min-height: 348px;
+    }
+
+    @media (min-width: @desktop-width) {
+        min-height: 198px;
+    }
 }
 
-.page-footer {
-    min-height: 460px;
+.page-footer__wrapper {
+    
+    @media (min-width: @tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.page-footer__social {
+
+    @media (min-width: @tablet-width) {
+        width: 640px;
+        order: 2;
+        margin: 0 auto;
+    }
+
+    @media (min-width: @desktop-width) {
+        order: 0;
+        width: 150px;
+        margin-left: 90px;
+    }
 }

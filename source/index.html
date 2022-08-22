@@ -11,9 +11,12 @@
 
 <body class="page-body">
     <header class="page-header">
-        <a class="page-header__logo" href="#">
-            <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
-        </a>
+        <div class="page-header__logo">
+            <a href="#">
+                <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+            </a>
+        </div>
+
         <nav class="main-nav">
             <button class="main-nav__toggle" type="button">
                 <span class="visually-hidden">Открыть меню</span>
@@ -49,7 +52,7 @@
                 <ul class="main-nav__list user-list">
                     <li class="user-list__item">
                         <a class="user-list__login js-login" href="login.html">
-                            Войти
+                            <span class="user-list__desktop">Войти</span> 
                         </a>
                     </li>
                 </ul>
@@ -87,7 +90,7 @@
                         1500<sup>*</sup>
                     </dt>
                     <dd class="stats__description">
-                        рублей<br>
+                        рублей
                         вложений
                     </dd>
                 </div>
@@ -97,7 +100,7 @@
                         7200
                     </dt>
                     <dd class="stats__description">
-                        секунд<br>
+                        секунд
                         времени мастера
                     </dd>
                 </div>
@@ -107,7 +110,7 @@
                         90000
                     </dt>
                     <dd class="stats__description">
-                        постриженных<br>
+                        постриженных
                         волос
                     </dd>
                 </div>
@@ -117,7 +120,7 @@
                         500000<sup>*</sup>
                     </dt>
                     <dd class="stats__description">
-                        лайков и<br>
+                        лайков и
                         комплиментов
                     </dd>
                 </div>
@@ -129,25 +132,25 @@
 
         <section class="advantages">
             <h2 class="visually-hidden">Наши приемущества</h2>
-            <div class="advantages__wrapper slider">
+            <div class="advantages__slider">
                 <input class="input-slider-1 visually-hidden" type="radio" name="slider" id="slider-1" checked>
 				<input class="input-slider-2 visually-hidden" type="radio" name="slider" id="slider-2">
 				<input class="input-slider-3 visually-hidden" type="radio" name="slider" id="slider-3">
 
-                <ul class="advantages__list slider__list">
-                    <li class="advantages__item advantages__item--fast slider__item">
+                <ul class="advantages__list">
+                    <li class="advantages__item advantages__item--fast">
                         <h3 class="advantages__title">Быстро</h3>
                         <p class="advantages__description">Мы делаем свою работу
-                            быстро! <br> Два часа пролетят незаметно <br> и вы - счастливый обладатель <br>
+                            быстро! Два часа пролетят незаметно и вы - счастливый обладатель
                             стильной стрижки-минутки.</p>
                     </li>
-                    <li class="advantages__item advantages__item--cool slider__item">
+                    <li class="advantages__item advantages__item--cool">
                         <h3 class="advantages__title">Круто</h3>
                         <p class="advantages__description">Забудьте, как вы стриглись раньше.
                             Мы сделаем из вас звезду футбола или кино. Во всяком случае
                             внешне.</p>
                     </li>
-                    <li class="advantages__item advantages__item--price slider__item">
+                    <li class="advantages__item advantages__item--price">
                         <h3 class="advantages__title">Дорого</h3>
                         <p class="advantages__description">Наши мастера - профессионалы своего
                             дела и не могут стоить дешево. К тому же, разве цена не
@@ -155,7 +158,7 @@
                     </li>
                 </ul>
 
-                <div class="slider__pagination">
+                <div class="advantages__pagination">
                     <label for="slider-1">
                         <span class="visually-hidden">Предыдущее приемущество</span>
                     </label>
@@ -213,7 +216,7 @@
                         </p>
                     </a>
                 </div>
-                <a class="news__to-all button" href="#">Показать все</a>
+                    <a class="news__button button" href="#">Показать все</a>
             </div>
         </section>
 
@@ -226,23 +229,25 @@
 				<input class="input-reviews__slider-2 visually-hidden" type="radio" name="reviews-slider" id="reviews-slider-2">
 				<input class="input-reviews__slider-3 visually-hidden" type="radio" name="reviews-slider" id="reviews-slider-3">
                 
-                <div class="reviews__list slider__list">
-                    <blockquote class="reviews__item slider__item">
+                <div class="reviews__list">
+                    <blockquote class="reviews__item">
+                        <span class="reviews__decor"></span>
                         <img src="img/photo.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
                         <div class="reviews__author-info">
                             <cite class="reviews__author-name">Трэвис Баркер</cite>
                             <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться,
                                 чтобы было видно новую татуировку!</p>
                         </div>
+                        <span class="reviews__decor"></span>
                     </blockquote>
-                    <blockquote class="reviews__item slider__item">
+                    <blockquote class="reviews__item">
                         <img src="img/photo.jpg" width="50" height="0" alt="Фото Джона Смита">
                         <div class="reviews__author-info">
                             <cite class="reviews__author-name">Джон Смит</cite>
                             <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
                         </div>
                     </blockquote>
-                    <blockquote class="reviews__item slider__item">
+                    <blockquote class="reviews__item">
                         <img src="img/photo.jpg" width="50" height="50" alt="Фото Ивана Бородайло">
                         <div class="reviews__author-info">
                             <cite class="reviews__author-name">Иван Бородайло</cite>
@@ -257,7 +262,7 @@
                     </button> -->
                 </div>
 
-                <div class="slider__pagination">
+                <div class="reviews__pagination">
                     <label for="reviews_slider-1">
                         <span class="visually-hidden">Предыдущий отзыв</span>
                     </label>
@@ -281,7 +286,7 @@
         <footer class="page-footer">
             <div class="page-footer__wrapper">
                 <div class="page-footer__contacts contacts">
-                    <b class="contacts__title">Барбершоп «Бородинский»</b>
+                    <b class="contacts__title">Барбершоп Бородинский</b>
                     <p class="contacts__text">
                         г.Санкт-Петербург, ул. Большая Конюшенная 19/8
                     </p>
@@ -290,7 +295,7 @@
                     </a>
                 </div>
                 <div class="page-footer__social social">
-                    <b class="social__title visually-hidden">Давайте дружить!</b>
+                    <b class="social__title">Давайте дружить!</b>
                     <ul class="social__list">
                         <li class="social__item">
                             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" alt="Мы в Вконтакте">

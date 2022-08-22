@@ -1,6 +1,15 @@
 .copyright{
     margin-top: 31px;
     padding-bottom: 2px;
+
+    @media (min-width: @tablet-width) {
+        margin-top: 52px;
+        margin-right: 64px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-right: 120px;
+    }
 }
 
 .copyright__text {
@@ -18,4 +27,9 @@
     background-color: #292929;
     display: block;
     margin: 13px 20px 24px;
+
+    @media (min-width: @tablet-width) {
+        margin: 13px 0 0 0;
+        width: 160px;
+    }
 }
