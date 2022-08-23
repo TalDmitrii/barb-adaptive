@@ -722,24 +722,6 @@ input::placeholder {
     background-image: url(../../img/back-desktop.jpg);
   }
 }
-.page-header__logo a {
-  display: block;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .page-header__logo a {
-    background-image: url(../../img/logotype-tablet.svg);
-    width: 370px;
-    height: 100px;
-    margin-top: 39px;
-  }
-}
-@media (min-width: 1200px) {
-  .page-header__logo a {
-    background-image: url(../../img/logo.svg);
-    height: 153px;
-  }
-}
 .page-photo {
   background-color: #F8F5F2;
   padding-top: 32px;
