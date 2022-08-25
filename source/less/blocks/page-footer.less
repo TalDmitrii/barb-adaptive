@@ -2,6 +2,24 @@
     background-color: #292929;
     color: #fff;
     min-height: 460px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 34px 160px 0px 160px;
+        position: absolute;
+        top: -34px;
+        left: 0px;
+        // border-color: #826550 transparent #826550 #826550;
+        border-color: transparent #292929 transparent #292929;
+
+        @media (min-width: @mobile-width-only) {
+            display: none;
+        }
+    }
 
     @media (min-width: @tablet-width) {
         min-height: 348px;

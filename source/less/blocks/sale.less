@@ -6,12 +6,43 @@
     width: 280px;
     height: 91px;
     position: relative;
+
+    @media (min-width: @tablet-width) {
+        width: 640px;
+        height: 113px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 270px;
+        height: 276px;
+        margin-right: 120px;
+    } 
 }
 
 .sale__info {
     display: block;
     padding-top: 25px;
     padding-left: 113px;
+
+    @media (min-width: @tablet-width) {
+        padding-top: 46px;
+        padding-left: 185px;
+        text-transform: uppercase;
+
+        font-size: 30px;
+        line-height: 27px;
+        font-weight: 700;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 20px;
+        font-weight: 400;
+        padding-top: 190px;
+        padding-left: 54px;
+        padding-right: 70px;
+
+        text-align: center;
+    }
 }
 
 .sale__clock {
@@ -23,4 +54,17 @@
     background-repeat: no-repeat;
 
 	background-image: url("../img/clock-illustration.png");
+
+    @media (min-width: @tablet-width) {
+        top: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 142px;
+        height: 139px;
+        background-image: url("../img/clock-illustration-desktop.png");
+
+        top: 20px;
+        left: 60px;
+    }
 }

@@ -4,8 +4,12 @@
     display: flex;
     flex-direction: column;
 
+    @media (min-width: @tablet-width) {
+        background-image: url(../../img/back-tablet.jpg);
+    }
+
     @media (min-width: @desktop-width) {
-        margin-bottom: -159px;
+        background-image: url(../../img/back-desktop.jpg);
     } 
 }
 
@@ -18,32 +22,48 @@
     @media (min-width: @tablet-width) {
         order: 2;
         height: 400px;
-        background-image: url(../../img/back-tablet.jpg);
-    }
+     }
 
     @media (min-width: @desktop-width) {
         height: 640px;
-        background-image: url(../../img/back-desktop.jpg);
+     } 
+}
+
+.page-header__logo--next {
+    @media (min-width: @tablet-width) {
+        height: 213px;
+    }
+
+    @media (min-width: @desktop-width) {
+        height: 307px;
+     } 
+}
+
+.page-header__logo a {
+    display: block;
+
+    @media (min-width: @tablet-width) {
+        margin-top: 39px;
+    }
+
+    @media (min-width: @desktop-width) {
+        height: 153px;
     } 
 }
 
+.page-header__pic img {
+    display: block;
+    margin: 0 auto;
 
-// // Не разобрался, как поменять картинку
-// .page-header__logo a {
-//     display: block;
-//     margin: 0 auto;
+    @media (min-width: @tablet-width) {
+        width: 370px;
+        height: 100px;
+    }
 
-//     @media (min-width: @tablet-width) {
-//         background-image: url(../../img/logotype-tablet.svg);
-//         width: 370px;
-//         height: 100px;
-//         margin-top: 39px;
-//     }
-
-//     @media (min-width: @desktop-width) {
-//         background-image: url(../../img/logo.svg);
-//         height: 153px;
-//     } 
-// }
+    @media (min-width: @desktop-width) {
+        width: 456px;
+        height: 196px;
+    } 
+}
 
 

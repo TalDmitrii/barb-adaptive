@@ -12,9 +12,9 @@
 
 <body class="page-body">
     <header class="page-header">
-        <div class="page-header__logo">
+        <div class="page-header__logo page-header__logo--next">
             <a href="index.html">
-                <picture>
+                <picture class="page-header__pic">
                     <source srcset="img/logo.svg" media="(min-width: 1200px)">
                     <source srcset="img/logotype-tablet.svg" media="(min-width: 768px)">
                     <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
@@ -22,9 +22,14 @@
             </a>
         </div>
         <nav class="main-nav">
-            <button class="main-nav__toggle" type="button">
-                <span class="visually-hidden">Открыть меню</span>
-            </button>
+            <div class="main-nav__top">
+                <a href="photo.html" class="main-nav__works">Работы</a>
+
+                <button class="main-nav__toggle" type="button">                
+                    <span class="visually-hidden">Открыть меню</span>
+                    <span class="main-nav__burger"></span>                
+                </button>
+            </div>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list site-list">
                     <li class="site-list__item site-list__item--active">
@@ -56,7 +61,7 @@
                 <ul class="main-nav__list user-list">
                     <li class="user-list__item">
                         <a class="user-list__login js-login" href="login.html">
-                            Войти
+                            <span class="user-list__desktop">Войти</span> 
                         </a>
                     </li>
                 </ul>
@@ -64,8 +69,14 @@
         </nav>
     </header>
 
-    <main class="page-photo">
-        <h1  class="page-photo__title">Наши работы</h1>
+    <main class="page-photo main-next">
+        <span class="main-next__decor"></span>
+
+        <div class="page-photo__header">
+            <h1  class="page-photo__title">Наши работы</h1>
+            <a href="index.html" class="main-next__index">На главную</a>
+        </div>
+
         
         <section class="page-photo__works works">
             <h2 class="visually-hidden">
@@ -74,13 +85,16 @@
             <ul class="works__list">
                 <li class="works__item">
                     <figure class="works__img-first img-first">
-                        <img src="img/photo-1-mobile.jpg" width="280" height="480" alt="Работа месяца">
-                        <!-- стиль для примера -->
+                        <picture>
+                            <source srcset="img/photo-1-desktop.jpg" media="(min-width: 1200px)">
+                            <source srcset="img/photo-1-tablet.jpg" media="(min-width: 768px)">
+                            <img src="img/photo-1-mobile.jpg" width="280" height="480" alt="Работа месяца">
+                        </picture>
                         <figcaption class="img-first__description">
                             Работа месяца
                         </figcaption>
                     </figure>
-                    <div class="works-container">
+                    <div class="works-container works-container--first">
                         <h3  class="works__title">
                             Лжепётр Мчиславский
                         </h3>
@@ -106,7 +120,11 @@
 
                 </li>
                 <li class="works__item">
-                    <img src="img/photo-2-mobile.jpg" width="280" height="176" alt="Пример омоложения">
+                    <picture>
+                        <source srcset="img/photo-2-desktop.jpg" media="(min-width: 1200px)">
+                        <source srcset="img/photo-2-tablet.jpg" media="(min-width: 768px)">
+                        <img src="img/photo-2-mobile.jpg" width="280" height="176" alt="Пример омоложения">
+                    </picture>
                     <div class="works-container">
                         <h3  class="works__title">
                             Саша Мальцев
@@ -123,7 +141,12 @@
                     </div>
                 </li>
                 <li class="works__item">
-                    <img src="img/photo-3-mobile.jpg" width="280" height="176" alt="Подготовка к сезону">
+                    <picture>
+                        <source srcset="img/photo-3-desktop.jpg" media="(min-width: 1200px)">
+                        <source srcset="img/photo-3-tablet.jpg" media="(min-width: 768px)">
+                        <img src="img/photo-3-mobile.jpg" width="280" height="176" alt="Подготовка к сезону">
+                    </picture>
+                    
                     <div class="works-container">
                         <h3  class="works__title">
                             Владимир Иваныч
@@ -144,7 +167,11 @@
                     </div>
                 </li>
                 <li class="works__item">
-                    <img src="img/photo-4-mobile.jpg" width="280" height="176" alt="Стрижка наголо">
+                    <picture>
+                        <source srcset="img/photo-4-desktop.jpg" media="(min-width: 1200px)">
+                        <source srcset="img/photo-4-tablet.jpg" media="(min-width: 768px)">
+                        <img src="img/photo-4-mobile.jpg" width="280" height="176" alt="Стрижка наголо">
+                    </picture>                    
                     <div class="works-container">
                         <h3  class="works__title">
                             Винстон Синий
@@ -173,9 +200,9 @@
 
                 <tbody class="table__cost">
                     <tr class="table__row">
-                        <!-- <td class="table__cell table__cell--number">
+                        <td class="table__cell table__cell--number">
                         1
-                        </td> -->
+                        </td>
                         <th class="table__cell table__cell--description">
                             Классическая стрижка
                         </th>
@@ -187,9 +214,9 @@
                         </td>
                     </tr>
                     <tr class="table__row">
-                        <!-- <td class="table__cell table__cell--number">
+                        <td class="table__cell table__cell--number">
                         2
-                        </td> -->
+                        </td>
                         <th class="table__cell table__cell--description">
                             Современный вариант
                         </th>
@@ -201,9 +228,9 @@
                         </td>
                     </tr>
                     <tr class="table__row">
-                        <!-- <td class="table__cell table__cell--number">
+                        <td class="table__cell table__cell--number">
                         3
-                        </td> -->
+                        </td>
                         <th class="table__cell table__cell--description">
                             Индивидуальный подход
                         </th>
@@ -215,9 +242,9 @@
                         </td>
                     </tr>
                     <tr class="table__row">
-                        <!-- <td class="table__cell table__cell--number">
+                        <td class="table__cell table__cell--number">
                         4
-                        </td> -->
+                        </td>
                         <th class="table__cell table__cell--description">
                             Бритье бороды
                         </th>
@@ -229,9 +256,9 @@
                         </td>
                     </tr>
                     <tr class="table__row">
-                        <!-- <td class="table__cell table__cell--number">
+                        <td class="table__cell table__cell--number">
                         5
-                        </td> -->
+                        </td>
                         <th class="table__cell table__cell--description">
                             Бритье головы
                         </th>
@@ -257,7 +284,7 @@
     <footer class="page-footer">
         <div class="page-footer__wrapper">
             <div class="page-footer__contacts contacts">
-                <b class="contacts__title">Барбершоп «Бородинский»</b>
+                <b class="contacts__title">Барбершоп Бородинский</b>
                 <p class="contacts__text">
                     г.Санкт-Петербург, ул. Большая Конюшенная 19/8
                 </p>
@@ -266,7 +293,7 @@
                 </a>
             </div>
             <div class="page-footer__social social">
-                <b class="social__title visually-hidden">Давайте дружить!</b>
+                <b class="social__title">Давайте дружить!</b>
                 <ul class="social__list">
                     <li class="social__item">
                         <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" alt="Мы в Вконтакте">
