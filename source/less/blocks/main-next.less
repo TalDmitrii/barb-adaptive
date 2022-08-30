@@ -20,17 +20,17 @@
 }
 
 .main-next__decor::before {
-    border-color: transparent #F8F5F2 transparent #F8F5F2;
+    border-color: transparent @main-next__decor-color transparent @main-next__decor-color;
 }
 
 .main-next__index {
     display: block;
-    width: 160px;
-    height: 50px;
+    min-width: 160px;
+    margin-bottom: 80px;
     text-decoration: none;
     border: 1px solid #E5DDD5;
     padding: 12px 34px;
-    background-color: #F8F5F2;
+    background-color: @main-next__decor-color;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 24px;
