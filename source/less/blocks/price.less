@@ -1,7 +1,35 @@
 .price {
     background-color: #353535;
     color: #fff;
-    padding-bottom: 95px;
+    padding-bottom: 56px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 34px 160px 0px 160px;
+        position: absolute;
+        top: -34px;
+        left: 0px;
+        border-color: transparent #353535 transparent #353535;
+
+
+        @media (min-width: @tablet-width) {
+            border-width: 34px 384px 0px 384px;
+        }
+        
+        @media (min-width: @desktop-width) {
+            display: none;
+        } 
+    }
+
+    @media (min-width: @desktop-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    } 
 }
 
 .price__title {
@@ -12,6 +40,19 @@
     text-align: center;
 
     text-transform: uppercase;
-    margin-top: 109px;
     margin-bottom: 32px;
+    padding-top: 41px;
+
+    @media (min-width: @tablet-width) {
+        text-align: left;
+        margin-left: 64px;
+        margin-bottom: 53px;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding-top: 77px;
+        margin-left: 120px;
+        margin-bottom: 60px;
+        width: 1000px;
+    } 
 }

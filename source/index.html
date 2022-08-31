@@ -14,7 +14,7 @@
     <header class="page-header">
         <div class="page-header__logo">
             <a href="index.html">
-                <picture>
+                <picture class="page-header__pic">
                     <source srcset="img/logo.svg" media="(min-width: 1200px)">
                     <source srcset="img/logotype-tablet.svg" media="(min-width: 768px)">
                     <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
@@ -23,9 +23,14 @@
         </div>
 
         <nav class="main-nav">
-            <button class="main-nav__toggle" type="button">
-                <span class="visually-hidden">Открыть меню</span>
-            </button>
+            <div class="main-nav__top">
+                <a href="form.html" class="main-nav__record">Записаться</a>
+
+                <button class="main-nav__toggle" type="button">                
+                    <span class="visually-hidden">Открыть меню</span>
+                    <span class="main-nav__burger"></span>                
+                </button>
+            </div>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list site-list">
                     <li class="site-list__item site-list__item--active">
@@ -238,8 +243,8 @@
                     <blockquote class="reviews__item">
                         <span class="reviews__decor"></span>
                                 <picture>
-                                    <!-- <source srcset="img/logo.svg" media="(min-width: 1200px)">
-                                    <source srcset="img/phot" media="(min-width: 768px)"> -->
+                                    <source srcset="img/photo_desktop.jpg" media="(min-width: 1200px)">
+                                    <source srcset="img/photo_tablet.jpg" media="(min-width: 768px)">
                                     <img src="img/photo_mobile.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
                                 </picture>
                         

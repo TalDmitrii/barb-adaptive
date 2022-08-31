@@ -1,6 +1,6 @@
 .page-photo {
-    background-color: #F8F5F2;
-    padding-top: 32px;
+    background-color: @main-next__decor-color;
+    // padding-top: 32px;
 }
 
 .page-photo__title {
@@ -10,6 +10,26 @@
     text-align: center;
 
     text-transform: uppercase;
-    margin-top: 0;
+    margin: 0;
     margin-bottom: 35px;
+    padding-top: 32px;
+
+    @media (min-width: @tablet-width) {
+        font-size: 40px;       
+        margin-left: 64px;
+        padding-top: 64px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-left: 120px;
+        margin-bottom: 90px;
+    }
+}
+
+.page-photo__header {
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+        justify-content: space-between;
+    }
 }

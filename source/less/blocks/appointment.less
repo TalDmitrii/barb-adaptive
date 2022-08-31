@@ -1,5 +1,77 @@
 .appointment {
-    background-color: #F8F5F2;
+    position: relative;
+    background-color: @main-next__decor-color;
+    padding-bottom: 70px;
+
+    @media (min-width: @tablet-width) {
+        padding-bottom: 76px;
+    }
+}
+
+.appointment__decor::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    top: -50px;
+    left: 0px;
+
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        border-width: 50px 384px 0 384px;
+    }
+
+    @media (min-width: @desktop-width) {
+        display: block;
+        border-width: 50px 600px 0 600px;
+    }
+}
+
+.appointment__decor::before {
+    border-color: transparent @main-next__decor-color transparent @main-next__decor-color;
+}
+
+.appointment__index {
+    display: block;
+    min-width: 160px;
+    margin-bottom: 80px;
+    text-decoration: none;
+    border: 1px solid #E5DDD5;
+    padding: 12px 34px;
+    background-color: @main-next__decor-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 24px;
+
+    @media (max-width: @mobile-width-only) {
+        display: none;
+    }
+
+    @media (min-width: @tablet-width) {
+        margin: 0;
+    }
+
+}
+
+.appointment__header {
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+        justify-content: space-between;
+        width: 640px;
+        margin: 0 auto;
+        padding-top: 52px;
+        margin-bottom: 66px;
+        vertical-align: baseline;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 960px;
+        padding-top: 53px;
+    }
 }
 
 .appointment__title {
@@ -12,15 +84,58 @@
     // normalize перебивает
     margin: 0 0 32px;
     padding-top: 35px;
+
+    @media (min-width: @tablet-width) {
+        margin: 0;
+        padding-top: 12px;
+    }
+}
+
+.appointment__data {
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 64px;
+        justify-content: space-between;
+        width: 640px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-left: 120px;
+        width: 960px;
+    }
 }
 
 .appointment__item {
     margin-bottom: 6px;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 35px;
+        font-size: 24px;
+        line-height: 31px;
+    }
 }
 
 .appointment__item:nth-child(3),
 .appointment__item:nth-child(5) {
     margin-bottom: 32px;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 35px;
+    }
+}
+
+.appointment__item:nth-child(4) input,
+.appointment__item:nth-child(5) input {
+    
+    @media (min-width: @tablet-width) {
+        width: 640px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 465px;
+    }
 }
 
 .appointment__item input {
@@ -32,6 +147,15 @@
     padding: 9px 0 11px 19px;
     color: #000;
     border: 1px solid #E5DDD5;
+
+    @media (min-width: @tablet-width) {
+        width: 213px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin: 0;
+        width: 295px;
+    }
 }
 
 // Правильно записал?
@@ -48,6 +172,15 @@ input::placeholder {
     padding: 9px 0 11px 19px;
     color: #000;
     border: 1px solid #E5DDD5;
+
+    @media (min-width: @tablet-width) {
+        width: 640px;
+        height: 211px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 960px;
+    }
 }
 
 .appointment__btn {
@@ -60,8 +193,16 @@ input::placeholder {
     display: block;
     margin: 0 auto;
     width: 280px;
-    height: 50px;
-    margin-bottom: 39px;
+    padding: 13px;
 
+    @media (min-width: @tablet-width) {
+        font-size: 24px;
+        line-height: 31px;
+        width: 640px;
+        padding: 20px;
+    }
 
+    @media (min-width: @desktop-width) {
+        width: 960px;
+    }
 }
