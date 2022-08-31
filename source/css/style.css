@@ -150,6 +150,7 @@
 .appointment {
   position: relative;
   background-color: #F8F5F2;
+  padding-bottom: 70px;
 }
 @media (min-width: 768px) {
   .appointment {
@@ -203,11 +204,6 @@
     margin: 0;
   }
 }
-@media (min-width: 1200px) {
-  .appointment__index {
-    margin: 0;
-  }
-}
 @media (min-width: 768px) {
   .appointment__header {
     display: flex;
@@ -215,16 +211,14 @@
     width: 640px;
     margin: 0 auto;
     padding-top: 52px;
-    margin-bottom: 67px;
+    margin-bottom: 66px;
     vertical-align: baseline;
   }
 }
 @media (min-width: 1200px) {
   .appointment__header {
     width: 960px;
-    margin: 0 auto;
     padding-top: 53px;
-    margin-bottom: 66px;
   }
 }
 .appointment__title {
@@ -240,11 +234,6 @@
   .appointment__title {
     margin: 0;
     padding-top: 12px;
-  }
-}
-@media (min-width: 1200px) {
-  .appointment__title {
-    margin: 0;
   }
 }
 @media (min-width: 768px) {
@@ -352,14 +341,14 @@ input::placeholder {
   display: block;
   margin: 0 auto;
   width: 280px;
-  height: 50px;
+  padding: 13px;
 }
 @media (min-width: 768px) {
   .appointment__btn {
     font-size: 24px;
     line-height: 31px;
     width: 640px;
-    height: 70px;
+    padding: 20px;
   }
 }
 @media (min-width: 1200px) {

@@ -1,6 +1,7 @@
 .appointment {
     position: relative;
     background-color: @main-next__decor-color;
+    padding-bottom: 70px;
 
     @media (min-width: @tablet-width) {
         padding-bottom: 76px;
@@ -53,10 +54,6 @@
         margin: 0;
     }
 
-    @media (min-width: @desktop-width) {
-        margin: 0;
-    }
-
 }
 
 .appointment__header {
@@ -67,16 +64,13 @@
         width: 640px;
         margin: 0 auto;
         padding-top: 52px;
-        margin-bottom: 67px;
+        margin-bottom: 66px;
         vertical-align: baseline;
     }
 
     @media (min-width: @desktop-width) {
         width: 960px;
-        margin: 0 auto;
         padding-top: 53px;
-        margin-bottom: 66px;
-
     }
 }
 
@@ -94,10 +88,6 @@
     @media (min-width: @tablet-width) {
         margin: 0;
         padding-top: 12px;
-    }
-
-    @media (min-width: @desktop-width) {
-        margin: 0;
     }
 }
 
@@ -203,14 +193,13 @@ input::placeholder {
     display: block;
     margin: 0 auto;
     width: 280px;
-    height: 50px;
-    // margin-bottom: 39px;
+    padding: 13px;
 
     @media (min-width: @tablet-width) {
         font-size: 24px;
         line-height: 31px;
         width: 640px;
-        height: 70px;
+        padding: 20px;
     }
 
     @media (min-width: @desktop-width) {
