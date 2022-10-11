@@ -12,7 +12,7 @@
 
 <body class="page-body">
     <header class="page-header">
-        <div class="page-header__logo  page-header__logo--next">
+        <div class="page-header__logo">
             <a href="index.html">
                 <picture class="page-header__pic">
                     <source srcset="img/logo.svg" media="(min-width: 1200px)">
@@ -21,18 +21,16 @@
                 </picture>
             </a>
         </div>
-        <nav class="main-nav">
-            <div class="main-nav__top">
-                <a href="form.html" class="main-nav__record">Записаться</a>
 
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <!-- <nav class="main-nav main-nav--closed main-nav--opened main-nav--nojs"> -->
                 <button class="main-nav__toggle" type="button">                
                     <span class="visually-hidden">Открыть меню</span>
-                    <span class="main-nav__burger"></span>                
+                    <!-- <span class="main-nav__burger"></span>                 -->
                 </button>
-            </div>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list site-list">
-                    <li class="site-list__item site-list__item--active">
+                    <li class="site-list__item">
                         <a href="index.html">
                             Главная
                         </a>
@@ -42,7 +40,7 @@
                             Наши работы
                         </a>
                     </li>
-                    <li class="site-list__item">
+                    <li class="site-list__item site-list__item--active">
                         <a href="form.html">
                             Записаться
                         </a>
@@ -61,13 +59,39 @@
                 <ul class="main-nav__list user-list">
                     <li class="user-list__item">
                         <a class="user-list__login js-login" href="login.html">
-                            <span class="user-list__desktop">Войти</span> 
+                            <!-- <span class="user-list__desktop">Войти</span>  -->
+                            <svg class="user-list__login-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                <path d="M7 2H14V14H7V16H16V0H7V2Z" fill="white"/>
+                                <path d="M7 9H0V7H7V4L11 8L7 12V9Z" fill="white"/>
+                                </g>
+                            </svg>
+                            <span>Войти</span> 
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
+
+    <script>
+        var navMain = document.querySelector('.main-nav');
+        var navToggle = document.querySelector('.main-nav__toggle');
+    
+        navMain.classList.remove('main-nav--nojs');
+    
+        navToggle.addEventListener('click', function() {
+            if (navMain.classList.contains('main-nav--closed')) {
+                navMain.classList.remove('main-nav--closed');
+                navMain.classList.add('main-nav--opened');
+            }
+            else {
+                navMain.classList.add('main-nav--closed');
+                navMain.classList.remove('main-nav--opened');
+            }
+        }
+        );
+    </script>
 
     <main class="appointment">
         <span class="appointment__decor"></span>

@@ -23,6 +23,8 @@
     padding-top: 67px;
     text-align: center;
     margin-bottom: 50px;
+    
+    cursor: pointer;
 
     @media (min-width: @tablet-width) {
         font-size: 24px;
@@ -121,15 +123,27 @@
     left: 8px;
 }
 
+.radio__decor:hover::before {
+    border: 4px solid #007DFA;
+    opacity: 0.6;
+}
+
+.radio__decor:focus::before {
+    border: 4px solid #E5DDD5;
+    opacity: 1;
+}
+
+
 .radio__decor::after {
     content: "";
     width: 20px;
     height: 20px;
     border-radius: 50%;
     position: absolute;
-    top: 18px;
-    left: 25px;
+    top: 17px;
+    left: 24px;
 }
+
 
 .appointment__form input:checked ~ .radio__decor::after {
     background-color: #000000;

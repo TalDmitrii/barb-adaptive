@@ -1,6 +1,6 @@
 .user-list {
     line-height: 24px;
-    padding-bottom: 263px;
+    // padding-bottom: 263px;
 
     @media (min-width: @tablet-width) {
         width: 60px;
@@ -14,42 +14,98 @@
 
 }
 
-.user-list__item {
-    padding-top: 18px;
-    padding-bottom: 19px;
-    padding-left: 47px;
-
-    @media (min-width: @tablet-width) {
-        padding: 0;
-        padding-left: 40px;
-    }
-}
 
 .user-list__login {
     position: relative;
-}
+    display: block;
+    padding: 17px 21px;
+    padding-left: 49px;
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
 
-.user-list__login::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: -30px;
-    width: 16px;
-    height: 16px;
-    background-repeat: no-repeat;
+    // opacity: 0.3;
 
-	background-image: url("../img/login-icon.svg");
-    
-    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-        top: -6px;
-        left: -20px;
+    @media (min-width: @tablet-width) {
+        width: 60px;
+        height: 70px;
+        padding: 0;
+
+        span {
+            position: absolute;
+            opacity: 0;
+        }
+
+        &:hover .user-list__login-icon {
+            opacity: 1;
+
+            path {
+                fill: #826550;
+            }
+        }
+
+        &:active .user-list__login-icon {
+            opacity: 0.3;
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    @media (min-width: @desktop-width) {
+        position: relative;
+
+        width: auto;
+        height: auto;
+        padding: 25px 30px 23px 50px;
+
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        span {
+            position: relative;
+            opacity: 1;
+        }
+
+        &:hover {
+            color: #000;
+
+            background-color: #fff;
+        }
+
+        &:active {
+            color: rgba(0, 0, 0, 0.3);
+
+            background-color: #fff;
+        }
+
+        &:hover .user-list__login-icon {
+            opacity: 0.3;
+
+            path {
+                fill: #000;
+            }
+        }
+
+        &:active .user-list__login-icon {
+            opacity: 0.1;
+        }
     }
 }
 
-.user-list__desktop {
+.user-list__login-icon {
+    position: absolute;
+    top: 26px;
+    left: 20px;
+    width: 16px;
+    height: 16px;
 
-    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-        display: none;
+    @media (min-width: @desktop-width) {
+        top: 30px;   
     }
 }
 

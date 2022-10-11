@@ -27,6 +27,16 @@
     background-color: #292929;
     display: block;
     margin: 13px 20px 24px;
+    
+    &:hover,
+    &:focus {
+        border: 1px solid #777777;
+    }
+
+    &:active {
+        border: none;
+        background-color: #252525;
+    }
 
     @media (min-width: @tablet-width) {
         margin: 13px 0 0 0;

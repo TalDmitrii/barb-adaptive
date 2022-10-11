@@ -28,6 +28,16 @@
     flex-grow: 1;
     border: 1px solid #4A4A4A;
 
+    &:hover,
+    &:focus {
+        border: 1px solid #777777;
+    }
+
+    &:active {
+        border: none;
+        background-color: #252525;
+    }
+
     @media (min-width: @desktop-width) {
         width: 50px;
         height: 50px;
