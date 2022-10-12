@@ -148,6 +148,24 @@
     color: #000;
     border: 1px solid #E5DDD5;
 
+    outline: none;
+
+    &:hover {
+        border: 1px solid #D5C9BD;
+    }
+
+    &:focus {
+        border: 3px solid #007DFA;
+        // opacity: 0.6;
+        // background-color: #fff;
+        // box-shadow: 0px 0px 4px #007DFA;
+        // border-color: fade(#007DFA, 1);
+    }
+   
+    &:active {
+        border: 1px solid #999999;
+    }
+
     @media (min-width: @tablet-width) {
         width: 213px;
     }
@@ -194,6 +212,14 @@ input::placeholder {
     margin: 0 auto;
     width: 280px;
     padding: 13px;
+
+    &:hover {
+        background-color: #6A4D38;
+    }
+
+    &:active {
+        background-color: fade(#6A4D38, 30%);
+    }
 
     @media (min-width: @tablet-width) {
         font-size: 24px;
