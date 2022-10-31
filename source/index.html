@@ -23,11 +23,11 @@
         </div>
 
         <nav class="main-nav main-nav--closed main-nav--nojs">
-        <!-- <nav class="main-nav main-nav--closed main-nav--opened main-nav--nojs"> -->
-                <button class="main-nav__toggle" type="button">                
-                    <span class="visually-hidden">Открыть меню</span>
-                    <!-- <span class="main-nav__burger"></span>                 -->
-                </button>
+            <!-- <nav class="main-nav main-nav--closed main-nav--opened main-nav--nojs"> -->
+            <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+                <!-- <span class="main-nav__burger"></span>                 -->
+            </button>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list site-list">
                     <li class="site-list__item site-list__item--active">
@@ -59,38 +59,20 @@
                 <ul class="main-nav__list user-list">
                     <li class="user-list__item">
                         <a class="user-list__login js-login" href="login.html">
-                            <svg class="user-list__login-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="user-list__login-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.5">
-                                <path d="M7 2H14V14H7V16H16V0H7V2Z" fill="white"/>
-                                <path d="M7 9H0V7H7V4L11 8L7 12V9Z" fill="white"/>
+                                    <path d="M7 2H14V14H7V16H16V0H7V2Z" fill="white" />
+                                    <path d="M7 9H0V7H7V4L11 8L7 12V9Z" fill="white" />
                                 </g>
                             </svg>
-                            <span>Войти</span> 
+                            <span>Войти</span>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-
-    <script>
-        var navMain = document.querySelector('.main-nav');
-        var navToggle = document.querySelector('.main-nav__toggle');
-    
-        navMain.classList.remove('main-nav--nojs');
-    
-        navToggle.addEventListener('click', function() {
-            if (navMain.classList.contains('main-nav--closed')) {
-                navMain.classList.remove('main-nav--closed');
-                navMain.classList.add('main-nav--opened');
-            }
-            else {
-                navMain.classList.add('main-nav--closed');
-                navMain.classList.remove('main-nav--opened');
-            }
-        }
-        );
-    </script>
 
     <main class="page-main">
         <h1 class="visually-hidden">
@@ -165,24 +147,24 @@
         <section class="advantages">
             <h2 class="visually-hidden">Наши приемущества</h2>
             <div class="advantages__slider">
-                <input class="input-slider-1 visually-hidden" type="radio" name="slider" id="slider-1" checked>
-				<input class="input-slider-2 visually-hidden" type="radio" name="slider" id="slider-2">
-				<input class="input-slider-3 visually-hidden" type="radio" name="slider" id="slider-3">
+                <!-- <input class="input-slider-1 visually-hidden" type="radio" name="slider" id="slider-1" checked>
+                <input class="input-slider-2 visually-hidden" type="radio" name="slider" id="slider-2">
+                <input class="input-slider-3 visually-hidden" type="radio" name="slider" id="slider-3"> -->
 
                 <ul class="advantages__list">
-                    <li class="advantages__item advantages__item--fast">
+                    <li class="advantages__item advantages__item--fast advantages__item--current j-item-1">
                         <h3 class="advantages__title">Быстро</h3>
                         <p class="advantages__description">Мы делаем свою работу
                             быстро! Два часа пролетят незаметно и вы - счастливый обладатель
                             стильной стрижки-минутки.</p>
                     </li>
-                    <li class="advantages__item advantages__item--cool">
+                    <li class="advantages__item advantages__item--cool j-item-2">
                         <h3 class="advantages__title">Круто</h3>
                         <p class="advantages__description">Забудьте, как вы стриглись раньше.
                             Мы сделаем из вас звезду футбола или кино. Во всяком случае
                             внешне.</p>
                     </li>
-                    <li class="advantages__item advantages__item--price">
+                    <li class="advantages__item advantages__item--price j-item-3">
                         <h3 class="advantages__title">Дорого</h3>
                         <p class="advantages__description">Наши мастера - профессионалы своего
                             дела и не могут стоить дешево. К тому же, разве цена не
@@ -190,7 +172,7 @@
                     </li>
                 </ul>
 
-                <div class="advantages__pagination">
+                <!-- <div class="advantages__pagination">
                     <label for="slider-1">
                         <span class="visually-hidden">Предыдущее приемущество</span>
                     </label>
@@ -200,13 +182,13 @@
                     <label for="slider-3">
                         <span class="visually-hidden">Следующее приемущество</span>
                     </label>
-                </div>
+                </div> -->
 
-                <!-- <p class="advantages__toggles slider__toggles">
-                    <button class="slider__toggle slider__toggle--current" type="button">1</button>
-                    <button class="slider__toggle" type="button">2</button>
-                    <button class="slider__toggle" type="button">3</button>
-                </p> -->
+                <p class="advantages__pagination">
+                    <button class="advantages__toggle j-button-1 j-color" type="button"></button>
+                    <button class="advantages__toggle j-button-2" type="button"></button>
+                    <button class="advantages__toggle j-button-3" type="button"></button>
+                </p>
             </div>
         </section>
 
@@ -218,7 +200,7 @@
                     <a class="news__item" href="#">
                         <time class="news__date" datetime="2017-09-29">
                             <b class="news__day">29</b>
-                            <span class="news__month">сент</span> 
+                            <span class="news__month">сент</span>
                         </time>
                         <p class="news__text">
                             Нам наконец завезли Ягермайстер! Теперь вы можете пропустить
@@ -229,7 +211,7 @@
                     <a class="news__item" href="#">
                         <time class="news__date" datetime="2017-09-19">
                             <b class="news__day">19</b>
-                            <span class="news__month">сент</span> 
+                            <span class="news__month">сент</span>
                         </time>
                         <p class="news__text">
                             В нашей команде пополнение, Борис «Бритва» Стригунец,
@@ -240,7 +222,7 @@
                     <a class="news__item" href="#">
                         <time class="news__date" datetime="2017-09-09">
                             <b class="news__day">9</b>
-                            <span class="news__month">сент</span> 
+                            <span class="news__month">сент</span>
                         </time>
                         <p class="news__text">
                             Все дорожает, а наши стрижки нет! Как так? Приходите,
@@ -248,7 +230,7 @@
                         </p>
                     </a>
                 </div>
-                    <a class="news__button button" href="#">Показать все</a>
+                <a class="news__button button" href="#">Показать все</a>
             </div>
         </section>
 
@@ -256,20 +238,23 @@
             <div class="reviews__wrapper reviews__slider">
                 <h2 class="reviews__title">Отзывы о нас</h2>
                 <a class="reviews__write button" href="form.html">Оставить свой</a>
-                
-                <input class="input-reviews__slider-1 visually-hidden" type="radio" name="reviews-slider" id="reviews-slider-1" checked>
-				<input class="input-reviews__slider-2 visually-hidden" type="radio" name="reviews-slider" id="reviews-slider-2">
-				<input class="input-reviews__slider-3 visually-hidden" type="radio" name="reviews-slider" id="reviews-slider-3">
-                
+
+                <input class="input-reviews__slider-1 visually-hidden" type="radio" name="reviews-slider"
+                    id="reviews-slider-1" checked>
+                <input class="input-reviews__slider-2 visually-hidden" type="radio" name="reviews-slider"
+                    id="reviews-slider-2">
+                <input class="input-reviews__slider-3 visually-hidden" type="radio" name="reviews-slider"
+                    id="reviews-slider-3">
+
                 <div class="reviews__list">
                     <blockquote class="reviews__item">
                         <span class="reviews__decor"></span>
-                                <picture>
-                                    <source srcset="img/photo_desktop.jpg" media="(min-width: 1200px)">
-                                    <source srcset="img/photo_tablet.jpg" media="(min-width: 768px)">
-                                    <img src="img/photo_mobile.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
-                                </picture>
-                        
+                        <picture>
+                            <source srcset="img/photo_desktop.jpg" media="(min-width: 1200px)">
+                            <source srcset="img/photo_tablet.jpg" media="(min-width: 768px)">
+                            <img src="img/photo_mobile.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
+                        </picture>
+
                         <div class="reviews__author-info">
                             <cite class="reviews__author-name">Трэвис Баркер</cite>
                             <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться,
@@ -316,58 +301,130 @@
                     <button class="slider__toggle" type="button">2</button>
                     <button class="slider__toggle" type="button">3</button>
                 </p> -->
-            
+
             </div>
         </section>
 
-        <footer class="page-footer">
-            <div class="page-footer__wrapper">
-                <div class="page-footer__contacts contacts">
-                    <b class="contacts__title">Барбершоп Бородинский</b>
-                    <p class="contacts__text">
-                        г.Санкт-Петербург, ул. Большая Конюшенная 19/8
-                    </p>
-                    <a class="contacts__phone" href="tel:+78125556666">
-                        <span class="contacts__phone-mobile">+7 (812) 555-66-66</span>
-                    </a>
-                </div>
-                <div class="page-footer__social social">
-                    <b class="social__title">Давайте дружить!</b>
-                    <ul class="social__list">
-                        <li class="social__item">
-                            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" alt="Мы в Вконтакте">
-                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.0578 23.1669C22.3524 21.6495 23 19.9256 23 17.9952C23 14.77 20.3795 12.5167 16.7104 11.704C18.2892 11.3102 19.476 10.8769 20.2725 9.82914C21.0685 8.78136 21.4666 7.60888 21.4666 6.31371C21.4666 4.53562 20.7811 3.46042 19.4104 2.07623C18.0395 0.69205 15.8589 0 12.8681 0H0V26H13.5008C17.7378 26.0001 19.7631 24.6843 21.0578 23.1669ZM7.15553 5.14199H10.3755C12.3139 5.14199 13.2834 5.80362 13.2834 7.25114C13.2834 7.78441 13.0757 8.78752 12.6605 9.2572C12.2449 9.72704 11.5314 9.96192 10.5209 9.96192H7.15562V5.14199H7.15553ZM7.11795 20.2097V15.4858H11.0644C12.3381 15.4858 13.2142 15.7367 13.6918 16.2381C14.1692 16.7398 14.4086 17.2887 14.4086 17.8858C14.4086 18.4829 14.1625 19.0189 13.6712 19.4953C13.1794 19.9719 12.4072 20.2097 11.3551 20.2097H7.11795Z" fill="white"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" alt="Мы в Фейсбуке">
-                                <svg width="18" height="39" viewBox="0 0 18 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.6588 39V22.0042H0V14.3584H4.76532V8.03139C4.76532 8.03139 4.98274 0.0619276 11.095 0H17.8977V7.50299H13.678C13.678 7.50299 11.8963 7.50299 11.8963 9.74534C11.8963 11.9829 11.8963 14.4918 11.8963 14.4918H18L17.2669 22.1328H12.0028V39H4.6588Z" fill="white"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" alt="Мы в Инстанраме">
-                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M36 0H0V36H36V0ZM18 11.4C21.6456 11.4 24.6 14.3556 24.6 18C24.6 21.6432 21.6456 24.6 18 24.6C14.3556 24.6 11.4 21.6432 11.4 18C11.4 14.3556 14.3556 11.4 18 11.4ZM31.2 31.2H4.8V15H7.6308C7.356 15.9528 7.2 16.9584 7.2 18C7.2 23.964 12.0372 28.8 18 28.8C23.9664 28.8 28.8 23.964 28.8 18C28.8 16.9584 28.644 15.9528 28.3692 15H31.2V31.2ZM31.2 6.0096V9.6288V10.8C31.2 10.8 30.6636 10.7868 30.0192 10.7976V10.8H26.4C25.746 10.8 25.2 10.8 25.2 10.8V4.8H30L30.0192 4.8036C30.0192 4.8036 31.2 4.8096 31.2 4.8C31.2 4.8 31.1976 6.006 31.1976 6.0096H31.2Z" fill="white"/>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="page-footer__copyright copyright">
-                    <b class="copyright__text">Разработано:</b>
-                    <a class="copyright__link button button--copyright"
-                        href="https://htmlacademy.ru/intensive/adaptive">
-                        HTML Academy
-                    </a>
-                </div>
-            </div>
-        </footer>
     </main>
+
+    <footer class="page-footer">
+        <div class="page-footer__wrapper">
+            <div class="page-footer__contacts contacts">
+                <b class="contacts__title">Барбершоп Бородинский</b>
+                <p class="contacts__text">
+                    г.Санкт-Петербург, ул. Большая Конюшенная 19/8
+                </p>
+                <a class="contacts__phone" href="tel:+78125556666">
+                    <span class="contacts__phone-mobile">+7 (812) 555-66-66</span>
+                </a>
+            </div>
+            <div class="page-footer__social social">
+                <b class="social__title">Давайте дружить!</b>
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"
+                            alt="Мы в Вконтакте">
+                            <svg width="23" height="26" viewBox="0 0 23 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.0578 23.1669C22.3524 21.6495 23 19.9256 23 17.9952C23 14.77 20.3795 12.5167 16.7104 11.704C18.2892 11.3102 19.476 10.8769 20.2725 9.82914C21.0685 8.78136 21.4666 7.60888 21.4666 6.31371C21.4666 4.53562 20.7811 3.46042 19.4104 2.07623C18.0395 0.69205 15.8589 0 12.8681 0H0V26H13.5008C17.7378 26.0001 19.7631 24.6843 21.0578 23.1669ZM7.15553 5.14199H10.3755C12.3139 5.14199 13.2834 5.80362 13.2834 7.25114C13.2834 7.78441 13.0757 8.78752 12.6605 9.2572C12.2449 9.72704 11.5314 9.96192 10.5209 9.96192H7.15562V5.14199H7.15553ZM7.11795 20.2097V15.4858H11.0644C12.3381 15.4858 13.2142 15.7367 13.6918 16.2381C14.1692 16.7398 14.4086 17.2887 14.4086 17.8858C14.4086 18.4829 14.1625 19.0189 13.6712 19.4953C13.1794 19.9719 12.4072 20.2097 11.3551 20.2097H7.11795Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
+                            alt="Мы в Фейсбуке">
+                            <svg width="18" height="39" viewBox="0 0 18 39" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.6588 39V22.0042H0V14.3584H4.76532V8.03139C4.76532 8.03139 4.98274 0.0619276 11.095 0H17.8977V7.50299H13.678C13.678 7.50299 11.8963 7.50299 11.8963 9.74534C11.8963 11.9829 11.8963 14.4918 11.8963 14.4918H18L17.2669 22.1328H12.0028V39H4.6588Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"
+                            alt="Мы в Инстанраме">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M36 0H0V36H36V0ZM18 11.4C21.6456 11.4 24.6 14.3556 24.6 18C24.6 21.6432 21.6456 24.6 18 24.6C14.3556 24.6 11.4 21.6432 11.4 18C11.4 14.3556 14.3556 11.4 18 11.4ZM31.2 31.2H4.8V15H7.6308C7.356 15.9528 7.2 16.9584 7.2 18C7.2 23.964 12.0372 28.8 18 28.8C23.9664 28.8 28.8 23.964 28.8 18C28.8 16.9584 28.644 15.9528 28.3692 15H31.2V31.2ZM31.2 6.0096V9.6288V10.8C31.2 10.8 30.6636 10.7868 30.0192 10.7976V10.8H26.4C25.746 10.8 25.2 10.8 25.2 10.8V4.8H30L30.0192 4.8036C30.0192 4.8036 31.2 4.8096 31.2 4.8C31.2 4.8 31.1976 6.006 31.1976 6.0096H31.2Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="page-footer__copyright copyright">
+                <b class="copyright__text">Разработано:</b>
+                <a class="copyright__link button button--copyright" href="https://htmlacademy.ru/intensive/adaptive">
+                    HTML Academy
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var navMain = document.querySelector('.main-nav');
+        var navToggle = document.querySelector('.main-nav__toggle');
+
+        var advSlider = document.querySelector('.advantages__slider');
+
+        var advFast = document.querySelector('.j-item-1');
+        var advCool = document.querySelector('.j-item-2');
+        var advPrice = document.querySelector('.j-item-3');
+        var togFast = document.querySelector('.j-button-1');
+        var togCool = document.querySelector('.j-button-2');
+        var togPrice = document.querySelector('.j-button-3');
+
+        navMain.classList.remove('main-nav--nojs');
+
+        navToggle.addEventListener('click', function () {
+            if (navMain.classList.contains('main-nav--closed')) {
+                navMain.classList.remove('main-nav--closed');
+                navMain.classList.add('main-nav--opened');
+            }
+            else {
+                navMain.classList.add('main-nav--closed');
+                navMain.classList.remove('main-nav--opened');
+            }
+        }
+        );
+
+        togCool.addEventListener('click', function () {
+                advFast.classList.remove('advantages__item--current');
+                advPrice.classList.remove('advantages__item--current');
+                advCool.classList.add('advantages__item--current');
+                togCool.classList.add('j-color');
+                togFast.classList.remove('j-color');
+                togPrice.classList.remove('j-color');
+        }
+        );
+
+        togPrice.addEventListener('click', function () {
+                advFast.classList.remove('advantages__item--current');
+                advCool.classList.remove('advantages__item--current');
+                advPrice.classList.add('advantages__item--current');
+                togPrice.classList.add('j-color');
+                togCool.classList.remove('j-color');
+                togFast.classList.remove('j-color');
+        }
+        );
+
+        togFast.addEventListener('click', function () {
+                advCool.classList.remove('advantages__item--current');
+                advPrice.classList.remove('advantages__item--current');
+                advFast.classList.add('advantages__item--current');
+                togFast.classList.add('j-color');
+                togCool.classList.remove('j-color');
+                togPrice.classList.remove('j-color');
+        }
+        );
+
+    </script>
+
 </body>
 
 </html>
