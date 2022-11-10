@@ -6,8 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Барбершоп «Бородинский»</title>
-    <!-- <link href="css/normalize.css" rel="stylesheet"> -->
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsansnarrow.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansnarrowbold.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
@@ -23,10 +25,8 @@
         </div>
 
         <nav class="main-nav main-nav--closed main-nav--nojs">
-            <!-- <nav class="main-nav main-nav--closed main-nav--opened main-nav--nojs"> -->
             <button class="main-nav__toggle" type="button">
                 <span class="visually-hidden">Открыть меню</span>
-                <!-- <span class="main-nav__burger"></span>                 -->
             </button>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__list site-list">
@@ -146,11 +146,7 @@
 
         <section class="advantages">
             <h2 class="visually-hidden">Наши приемущества</h2>
-            <div class="advantages__slider">
-                <!-- <input class="input-slider-1 visually-hidden" type="radio" name="slider" id="slider-1" checked>
-                <input class="input-slider-2 visually-hidden" type="radio" name="slider" id="slider-2">
-                <input class="input-slider-3 visually-hidden" type="radio" name="slider" id="slider-3"> -->
-
+            <div class="advantages__slider">               
                 <ul class="advantages__list">
                     <li class="advantages__item advantages__item--fast advantages__item--current j-item-1">
                         <h3 class="advantages__title">Быстро</h3>
@@ -171,21 +167,8 @@
                             дает определнный статус?</p>
                     </li>
                 </ul>
-
-                <!-- <div class="advantages__pagination">
-                    <label for="slider-1">
-                        <span class="visually-hidden">Предыдущее приемущество</span>
-                    </label>
-                    <label for="slider-2">
-                        <span class="visually-hidden">Следующее приемущество</span>
-                    </label>
-                    <label for="slider-3">
-                        <span class="visually-hidden">Следующее приемущество</span>
-                    </label>
-                </div> -->
-
                 <p class="advantages__pagination">
-                    <button class="advantages__toggle j-button-1 j-color" type="button"></button>
+                    <button class="advantages__toggle j-button-1 advantages__toggle--current" type="button"></button>
                     <button class="advantages__toggle j-button-2" type="button"></button>
                     <button class="advantages__toggle j-button-3" type="button"></button>
                 </p>
@@ -238,17 +221,11 @@
             <div class="reviews__wrapper reviews__slider">
                 <h2 class="reviews__title">Отзывы о нас</h2>
                 <a class="reviews__write button" href="form.html">Оставить свой</a>
-
-                <input class="input-reviews__slider-1 visually-hidden" type="radio" name="reviews-slider"
-                    id="reviews-slider-1" checked>
-                <input class="input-reviews__slider-2 visually-hidden" type="radio" name="reviews-slider"
-                    id="reviews-slider-2">
-                <input class="input-reviews__slider-3 visually-hidden" type="radio" name="reviews-slider"
-                    id="reviews-slider-3">
-
                 <div class="reviews__list">
-                    <blockquote class="reviews__item">
-                        <span class="reviews__decor"></span>
+                    <button class="reviews__prev" type="button">
+                        <!-- Предыдущий отзыв -->
+                    </button>
+                    <blockquote class="reviews__item reviews__item--barker reviews__item--current js-item-1">
                         <picture>
                             <source srcset="img/photo_desktop.jpg" media="(min-width: 1200px)">
                             <source srcset="img/photo_tablet.jpg" media="(min-width: 768px)">
@@ -260,51 +237,41 @@
                             <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться,
                                 чтобы было видно новую татуировку!</p>
                         </div>
-                        <span class="reviews__decor"></span>
                     </blockquote>
-                    <blockquote class="reviews__item">
-                        <img src="img/photo.jpg" width="50" height="0" alt="Фото Джона Смита">
+                    <blockquote class="reviews__item reviews__item--smith js-item-2">
+                        <picture>
+                            <source srcset="img/photo_desktop.jpg" media="(min-width: 1200px)">
+                            <source srcset="img/photo_tablet.jpg" media="(min-width: 768px)">
+                            <img src="img/photo_mobile.jpg" width="50" height="50" alt="Фото Джона Смита">
+                        </picture>
                         <div class="reviews__author-info">
                             <cite class="reviews__author-name">Джон Смит</cite>
                             <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
                         </div>
                     </blockquote>
-                    <blockquote class="reviews__item">
-                        <img src="img/photo.jpg" width="50" height="50" alt="Фото Ивана Бородайло">
+                    <blockquote class="reviews__item reviews__item--boroda js-item-3">
+                        <picture>
+                            <source srcset="img/photo_desktop.jpg" media="(min-width: 1200px)">
+                            <source srcset="img/photo_tablet.jpg" media="(min-width: 768px)">
+                            <img src="img/photo_mobile.jpg" width="50" height="50" alt="Фото Ивана Бородайло">
+                        </picture>
                         <div class="reviews__author-info">
                             <cite class="reviews__author-name">Иван Бородайло</cite>
                             <p class="reviews__text">В Бородинском ваша борода в надежных руках</p>
                         </div>
                     </blockquote>
-                    <!-- <button class="reviews__prev" type="button">
-                        Предыдущий отзыв
-                    </button>
+
                     <button class="reviews__next" type="button">
-                        Следующий отзыв
-                    </button> -->
+                        <!-- Следующий отзыв -->
+                    </button>
                 </div>
-
-                <div class="reviews__pagination">
-                    <label for="reviews_slider-1">
-                        <span class="visually-hidden">Предыдущий отзыв</span>
-                    </label>
-                    <label for="reviews_slider-2">
-                        <span class="visually-hidden">Следующий отзыв</span>
-                    </label>
-                    <label for="reviews_slider-3">
-                        <span class="visually-hidden">Следующий отзыв</span>
-                    </label>
-                </div>
-
-                <!-- <p class="reviews__toggles slider__toggles">
-                    <button class="slider__toggle slider__toggle--current" type="button">1</button>
-                    <button class="slider__toggle" type="button">2</button>
-                    <button class="slider__toggle" type="button">3</button>
-                </p> -->
-
+                <p class="reviews__toggles">
+                    <button class="reviews__toggle js-button-1 reviews__toggle--current" type="button"></button>
+                    <button class="reviews__toggle js-button-2" type="button"></button>
+                    <button class="reviews__toggle js-button-3" type="button"></button>
+                </p>
             </div>
         </section>
-
     </main>
 
     <footer class="page-footer">
@@ -379,6 +346,13 @@
         var togCool = document.querySelector('.j-button-2');
         var togPrice = document.querySelector('.j-button-3');
 
+        var revBark = document.querySelector('.js-item-1');
+        var revSmith = document.querySelector('.js-item-2');
+        var revBor = document.querySelector('.js-item-3');
+        var togBark = document.querySelector('.js-button-1');
+        var togSmith = document.querySelector('.js-button-2');
+        var togBor = document.querySelector('.js-button-3');
+
         navMain.classList.remove('main-nav--nojs');
 
         navToggle.addEventListener('click', function () {
@@ -394,37 +368,66 @@
         );
 
         togCool.addEventListener('click', function () {
-                advFast.classList.remove('advantages__item--current');
-                advPrice.classList.remove('advantages__item--current');
-                advCool.classList.add('advantages__item--current');
-                togCool.classList.add('j-color');
-                togFast.classList.remove('j-color');
-                togPrice.classList.remove('j-color');
+            advFast.classList.remove('advantages__item--current');
+            advPrice.classList.remove('advantages__item--current');
+            advCool.classList.add('advantages__item--current');
+            togCool.classList.add('advantages__toggle--current');
+            togFast.classList.remove('advantages__toggle--current');
+            togPrice.classList.remove('advantages__toggle--current');
         }
         );
 
         togPrice.addEventListener('click', function () {
-                advFast.classList.remove('advantages__item--current');
-                advCool.classList.remove('advantages__item--current');
-                advPrice.classList.add('advantages__item--current');
-                togPrice.classList.add('j-color');
-                togCool.classList.remove('j-color');
-                togFast.classList.remove('j-color');
+            advFast.classList.remove('advantages__item--current');
+            advCool.classList.remove('advantages__item--current');
+            advPrice.classList.add('advantages__item--current');
+            togPrice.classList.add('advantages__toggle--current');
+            togCool.classList.remove('advantages__toggle--current');
+            togFast.classList.remove('advantages__toggle--current');
         }
         );
 
         togFast.addEventListener('click', function () {
-                advCool.classList.remove('advantages__item--current');
-                advPrice.classList.remove('advantages__item--current');
-                advFast.classList.add('advantages__item--current');
-                togFast.classList.add('j-color');
-                togCool.classList.remove('j-color');
-                togPrice.classList.remove('j-color');
+            advCool.classList.remove('advantages__item--current');
+            advPrice.classList.remove('advantages__item--current');
+            advFast.classList.add('advantages__item--current');
+            togFast.classList.add('advantages__toggle--current');
+            togCool.classList.remove('advantages__toggle--current');
+            togPrice.classList.remove('advantages__toggle--current');
+        }
+        );
+
+        togSmith.addEventListener('click', function () {
+            revBark.classList.remove('reviews__item--current');
+            revBor.classList.remove('reviews__item--current');
+            revSmith.classList.add('reviews__item--current');
+            togSmith.classList.add('reviews__toggle--current');
+            togBark.classList.remove('reviews__toggle--current');
+            togBor.classList.remove('reviews__toggle--current');
+        }
+        );
+
+        togBor.addEventListener('click', function () {
+            revBark.classList.remove('reviews__item--current');
+            revSmith.classList.remove('reviews__item--current');
+            revBor.classList.add('reviews__item--current');
+            togBor.classList.add('reviews__toggle--current');
+            togSmith.classList.remove('reviews__toggle--current');
+            togBark.classList.remove('reviews__toggle--current');
+        }
+        );
+
+        togBark.addEventListener('click', function () {
+            revSmith.classList.remove('reviews__item--current');
+            revBor.classList.remove('reviews__item--current');
+            revBark.classList.add('reviews__item--current');
+            togBark.classList.add('reviews__toggle--current');
+            togSmith.classList.remove('reviews__toggle--current');
+            togBor.classList.remove('reviews__toggle--current');
         }
         );
 
     </script>
-
 </body>
 
 </html>
