@@ -5,7 +5,7 @@
 
     @media (min-width: @desktop-width) {
         margin-top: -159px;
-    } 
+    }
 }
 
 .advantages__list {
@@ -13,34 +13,33 @@
     min-height: 345px;
 
     @media (min-width: @desktop-width) {
-		display: flex;
+        display: flex;
         margin: 0 auto;
         width: 926px;
         justify-content: space-around;
     }
 }
 
-.advantages__list::after {
-	content: "";
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-color: #353535 transparent transparent transparent;
-	border-width: 34px 160px 0 160px;
+.advantages__slider::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #353535 transparent transparent transparent;
+    border-width: 34px 160px 0 160px;
 
-	position: absolute;
-	top: 363px;
-	left: 0;
+    position: absolute;
+    top: 387px;
+    left: 0;
 
-	@media (min-width: @tablet-width) {
-		border-width: 34px 384px 0 384px;
-		top: 504px;
+    @media (min-width: @tablet-width) {
+        border-width: 34px 384px 0 384px;
+        top: 504px;
     }
 
-	@media (min-width: @desktop-width) {
-		border-width: 34px 600px 0 600px;
-		top: 558px;
-		left: -136px;
+    @media (min-width: @desktop-width) {
+        border-width: 34px 600px 0 600px;
+        top: 558px;
     }
 }
 
@@ -52,12 +51,16 @@
 
     @media (min-width: @tablet-width) {
         background-position: left 80px top 40px;
-		display: block;
+        display: block;
     }
 
     @media (min-width: @desktop-width) {
         background-position: left 70px top 230px;
     }
+}
+
+.advantages__item--current {
+    display: block;
 }
 
 .advantages__title {
@@ -70,13 +73,13 @@
     text-transform: uppercase;
 
     @media (min-width: @tablet-width) {
-		padding-top: 42px;
+        padding-top: 42px;
         margin-left: 224px;
         text-align: left;
-    }    
+    }
 
     @media (min-width: @desktop-width) {
-		padding-top: 366px;
+        padding-top: 366px;
         margin: 0;
         text-align: center;
         margin-bottom: 16px;
@@ -94,10 +97,10 @@
         margin-left: 224px;
         text-align: left;
         width: 441px;
-    } 
-    
+    }
+
     @media (min-width: @desktop-width) {
-		padding: 0;
+        padding: 0;
         margin: 0;
         text-align: center;
         width: 230px;
@@ -106,49 +109,54 @@
 }
 
 .advantages__item--fast {
-	background-image: url("../img/advantage-1-icon.svg");
+    background-image: url("../img/advantage-1-icon.svg");
 }
 
 .advantages__item--cool {
-	background-image: url("../img/advantage-2-icon.svg");
+    background-image: url("../img/advantage-2-icon.svg");
 }
 
 .advantages__item--price {
-	background-image: url("../img/advantage-3-icon.svg");
+    background-image: url("../img/advantage-3-icon.svg");
 }
-
-.input-slider-1:checked ~ .advantages__list .advantages__item--fast,
-.input-slider-2:checked ~ .advantages__list .advantages__item--cool,
-.input-slider-3:checked ~ .advantages__list .advantages__item--price {
-	display: block;
-}
-
 
 .advantages__pagination {
-	width: 56px;
-	justify-content: space-between;
-	display: flex;
+    width: 56px;
+    justify-content: space-between;
+    display: flex;
     margin: 0 auto;
     padding-bottom: 13px;
-	position: relative;
+    padding-top: 13px;
+    position: relative;
 
-	@media (min-width: @tablet-width) {
-		display: none;
+    @media (min-width: @tablet-width) {
+        display: none;
     }
 }
 
-.advantages__pagination label {
-	width: 5px;
-	height: 5px;
-	background-color: #292929;
-	border: 1px solid #ffffff;
+.advantages__toggle {
+    position: relative;
+    background-color: #353535;
+    border: none;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.advantages__toggle::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    background-color: #292929;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #ffffff;
     transform: rotate(45deg);
-	cursor: pointer;
+    cursor: pointer;
 }
 
-.input-slider-1:checked ~ .advantages__pagination label:nth-child(1),
-.input-slider-2:checked ~ .advantages__pagination label:nth-child(2),
-.input-slider-3:checked ~ .advantages__pagination label:nth-child(3) {
-	background-color: #ffffff;
+.advantages__toggle--current::after {
+    background-color: #ffffff;
 }
-
